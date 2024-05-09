@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 250px;
+    height: 400px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+/* PARTE SUPERIORE DELLA CALCOLATRICE DOVE C'è LA MARCA  */
+.mark{
+    
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    padding: 20px;
+    font-size: xx-large;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+/* DISPLAY LCD DELLA CALCOLATRICE */
+.lcd{
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    font-size: xx-large;
+    color: greenyellow;
+    align-content: center;
+    flex-direction: row-reverse;
+    padding: 15px;
+}
+/* CONTENITORE TASTIERA CALCOLATRICE */
+.keyboard{
+    
+    width: 100%;
+    height: 60%;
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+}
+/* PULSANTE NUMERO */
+.btnumber{
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px  15px;
+    font-size: x-large;
+    border: 1px solid rgb(77, 76, 76);
+}
+
+/* PULSANTE FUNZIONE */
+.btfunction{
+    background-color: lightskyblue;
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    padding: 5px 15px ;
+    font-size: large;
+    color: white;
+    border: 1px solid rgb(101, 153, 185);
+}
+
+/* IMPOSTA IL COLORE AI TASTI CLEAR E EQUAL  */
+.equal-clear{
+    background-color: coral;
+    border: 1px solid rgb(165, 82, 51);
+}
+
+/* CONTENITORE SEZIONE TASTIERA NUMERICO */
+.keyboardnumber{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-content: space-evenly;
+    flex-wrap: wrap; 
+}
+/* CONTENITORE SEZIONE TASTIERA FUNZIONI */
+.keyboardfunction{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+/* RIGA TASTIERA NUMERICA */
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* IMPOSTA LA DIMENZIONE DEL PULSANTE ZERO */
+.btnumber.number0{
+    width: 100px;
+}
