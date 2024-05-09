@@ -47,7 +47,7 @@ let uguale = 0;
 // })
 function buttonclickk (result){
     switch (result){
-        //tasto cancella 
+            //TASTO CANCELLA 
         case 'canc':
             screen.innerHTML = '';
             firstOperator = 0;
@@ -93,21 +93,22 @@ function buttonclickk (result){
             
             secondOperator = +(screen.innerHTML) ;
             switch (sign){
+                //SE RESULT = A PIU
                 case 'piu':
                     uguale = (firstOperator + secondOperator)
                     console.log(`${firstOperator} + ${secondOperator}`)
                     break;
-
+                //SE RESULT UGUALE À MENO
                 case 'meno':
                     uguale = (firstOperator - secondOperator)
                     console.log(`${firstOperator} - ${secondOperator}`)
                     break;
-
+                //SE RESULT UGUALE À PER ALLORA
                 case 'per':
                     uguale = (firstOperator * secondOperator)
                     console.log(`${firstOperator} * ${secondOperator}`)
                     break;
-
+                //SE RESULT = DIVISO ALLORA
                 case 'diviso':
                     if (secondOperator===0) {uguale = 'Err'} //SE PROVIAMO A DIVIDERE UN NUMERO PER 0  LA CALCOLATRICE DARA ERR
                     else{
