@@ -33,7 +33,8 @@ buttonclick ('functionper', 'btfunctionper','*');
 
 
 let screen = document.getElementById('screen');
-
+let firstOperator = 0;
+let sign;
 
 // let num1 = document.getElementById('btnum1')
 // num1.addEventListener('click', function(){
@@ -41,20 +42,37 @@ let screen = document.getElementById('screen');
 // })
 function buttonclickk (result){
     switch (result){
-        case '+':
+        case 'canc':
             screen.innerHTML = '';
+            firstOperator = screen.innerHTML;
+            console.log (firstOperator);
+
+            break;
+        case '+':
+            sign = '+';
+            firstOperator = +(screen.innerHTML) ;
+            screen.innerHTML = '';
+            console.log (firstOperator);
+
             break;
 
         case '-':
+            sign = '-';
+            firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
+            console.log (firstOperator);
             break;
 
         case '*':
+            firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
+            console.log (firstOperator);
             break;
 
         case '/':
+            firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
+            console.log (firstOperator);
             break;
         case 1 :
         case 2 :
