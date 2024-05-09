@@ -36,8 +36,10 @@ buttonclick ('functionequal', 'btfunctionequal','=');
 let screen = document.getElementById('screen');
 let firstOperator = 0;
 let secondOperator = 0;
-let sign;
+let sign = '+';
 let uguale = 0;
+let ciao ;
+
 
 // let num1 = document.getElementById('btnum1')
 // num1.addEventListener('click', function(){
@@ -50,13 +52,13 @@ function buttonclickk (result){
             screen.innerHTML = '';
             firstOperator = 0;
             secondOperator = 0;
-            result= 0;
+            uguale = 0;
             console.log (firstOperator);
 
             break;
             //TASTO ADDIZIONE
         case '+':
-            uguale = firstOperator + secondOperator;
+            uguale = 'piu';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
@@ -64,31 +66,47 @@ function buttonclickk (result){
             break;
             //TASTO SOTTRAZIONE
         case '-':
-            uguale = firstOperator - secondOperator;
+            uguale = 'meno';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
             //TASTO MOLTIPLICAZIONE
         case '*':
-            uguale = firstOperator * secondOperator;
+            uguale = 'per';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
             //TASTO DIVISIONE
         case '/':
-            uguale = firstOperator / secondOperator;
+            uguale = 'diviso';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
            // TASTO RISULTATO
         case '=':
+            
             secondOperator = +(screen.innerHTML) ;
+            switch (uguale){
+                case 'piu':
+                    ciao = (firstOperator + secondOperator)
+                    break;
+                case 'meno':
+                    ciao = (firstOperator - secondOperator)
+                    break;
+                case 'per':
+                    ciao = (firstOperator * secondOperator)
+                    break;
+                case 'diviso':
+                    ciao = (firstOperator / secondOperator)
+                    break;
+            }
+
             screen.innerHTML = '';
-            screen.innerHTML = uguale;
-            console.log (firstOperator,sign,secondOperator);
+            screen.innerHTML = ciao;
+            console.log (ciao);
             break
 
 
@@ -120,4 +138,6 @@ function buttonclickk (result){
     console.log(firstOperator)
 
 }
+
+
 
