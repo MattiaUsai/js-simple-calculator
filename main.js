@@ -36,9 +36,9 @@ buttonclick ('functionequal', 'btfunctionequal','=');
 let screen = document.getElementById('screen');
 let firstOperator = 0;
 let secondOperator = 0;
-let sign = '+';
+let sign ;
 let uguale = 0;
-let ciao ;
+
 
 
 // let num1 = document.getElementById('btnum1')
@@ -53,60 +53,72 @@ function buttonclickk (result){
             firstOperator = 0;
             secondOperator = 0;
             uguale = 0;
-            console.log (firstOperator);
-
             break;
+
             //TASTO ADDIZIONE
         case '+':
-            uguale = 'piu';
+            sign = 'piu';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
-
             break;
+
             //TASTO SOTTRAZIONE
         case '-':
-            uguale = 'meno';
+
+            sign = 'meno';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
+
             //TASTO MOLTIPLICAZIONE
         case '*':
-            uguale = 'per';
+            sign = 'per';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
+
             //TASTO DIVISIONE
         case '/':
-            uguale = 'diviso';
+            sign = 'diviso';
             firstOperator = +(screen.innerHTML) ;
             screen.innerHTML = '';
             console.log (firstOperator);
             break;
+
            // TASTO RISULTATO
         case '=':
             
             secondOperator = +(screen.innerHTML) ;
-            switch (uguale){
+            switch (sign){
                 case 'piu':
-                    ciao = (firstOperator + secondOperator)
+                    uguale = (firstOperator + secondOperator)
+                    console.log(`${firstOperator} + ${secondOperator}`)
                     break;
+
                 case 'meno':
-                    ciao = (firstOperator - secondOperator)
+                    uguale = (firstOperator - secondOperator)
+                    console.log(`${firstOperator} - ${secondOperator}`)
                     break;
+
                 case 'per':
-                    ciao = (firstOperator * secondOperator)
+                    uguale = (firstOperator * secondOperator)
+                    console.log(`${firstOperator} * ${secondOperator}`)
                     break;
+
                 case 'diviso':
-                    ciao = (firstOperator / secondOperator)
+                    if (secondOperator===0) {uguale = 'Err'} //SE PROVIAMO A DIVIDERE UN NUMERO PER 0  LA CALCOLATRICE DARA ERR
+                    else{
+                    uguale = (firstOperator / secondOperator)} 
+                    console.log(`${firstOperator} / ${secondOperator}`)
                     break;
             }
 
             screen.innerHTML = '';
-            screen.innerHTML = ciao;
-            console.log (ciao);
+            screen.innerHTML = uguale;
+            console.log (uguale);
             break
 
 
@@ -135,7 +147,7 @@ function buttonclickk (result){
 
 
 
-    console.log(firstOperator)
+ 
 
 }
 
